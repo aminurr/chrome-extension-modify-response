@@ -9,7 +9,7 @@ A sample and simple template to start writing Chrome extension to modify respons
 		npm install
 		npm run build #or npm run zip to package
 
-##Steps to install to chrome
+## Steps to install to chrome
 1. Go to chrome://extension
 2. Enable developer mode. (top right corner)
 3. Install extension using Load unpacked (select folder from build) and click select
