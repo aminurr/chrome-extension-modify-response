@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Sample Chrome Extension to provide a hook point to modify http response",
+  "description": "This is a sample template Chrome Extension to provide a hook point to modify http response",
+  "version": "__VERSION__",
+  "background": {
+    "script": "background.js"
+  },
+  "author": {
+    "email": "info atTheRateOf aminurrashid.com"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "background.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+    "16": "resources/icons/16x16.png",
+    "48": "resources/icons/48x48.png",
+    "128": "resources/icons/128x128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "scripts/modifyresponse.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "permissions": [
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; script-src-elem https://firebasestorage.googleapis.com; object-src 'self'"
+  }
+}
